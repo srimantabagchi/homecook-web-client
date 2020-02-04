@@ -1,11 +1,12 @@
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
   s3: {
     REGION: "us-east-1",
     BUCKET: "notes-app-file-upload-folder"
   },
   apiGateway: {
     REGION: "us-east-1",
-    URL: "https://5av36gzh3m.execute-api.us-east-1.amazonaws.com/prod"
+    URL: "https://mupjfuz69g.execute-api.us-east-1.amazonaws.com/prod"
   },
   cognito: {
     REGION: "us-east-1",
