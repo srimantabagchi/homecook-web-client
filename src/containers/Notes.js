@@ -21,10 +21,13 @@ export default function Notes(props) {
     async function onLoad() {
       try {
         const note = await loadNote();
-        const { content, attachment } = note;
+        const { userId, content, attachment } = note;
 
         if (attachment) {
-          note.attachmentURL = await Storage.vault.get(attachment);
+          note.attachmentURL = await Storage.get(attachment, {
+            level: "protected",
+            identityId: userId
+          });
         }
 
         setContent(content);
