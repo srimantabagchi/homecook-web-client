@@ -9,6 +9,7 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
+import ResetPassword from "./containers/ResetPassword";
 
 export default function Routes({ appProps }) {
   return (
@@ -24,6 +25,12 @@ export default function Routes({ appProps }) {
         path="/signup"
         exact
         component={Signup}
+        appProps={appProps}
+      />
+      <UnauthenticatedRoute
+        path="/login/reset"
+        exact
+        component={ResetPassword}
         appProps={appProps}
       />
       <AuthenticatedRoute

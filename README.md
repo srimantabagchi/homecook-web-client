@@ -66,4 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# kanalytics-app-client
+
+# cookriz-app-client
+
+aws cloudformation deploy --stack-name notes-upload --region us-east-1 --template-file s3-static-website-with-cloudfront.yaml --profile saml
+npm run build
+aws s3 sync build/ s3://notes-object-pool --profile saml
