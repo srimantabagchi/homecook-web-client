@@ -1,19 +1,30 @@
 import React from "react";
+import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 const ItemForm = ({ label, children, type = "text", ...otherProps }) => (
     <div>
-        {type === "text" ? (
-            <>
-                <label>{label}</label>
-                <input type={type} {...otherProps} />
-            </>
-        ) : (
+        <FormGroup controlId={type} bsSize="large">
+            {type === "text" ? (
                 <>
-                    <label />
-                    <input type={type} {...otherProps} />
-                    {label}
+                    <ControlLabel>{label}</ControlLabel>
+                    <FormControl
+                        autoFocus
+                        type={type}
+                        {...otherProps}
+                    />
                 </>
-            )}
+            ) : (
+                    <>
+                        <ControlLabel />
+                        <FormControl
+                            autoFocus
+                            type={type}
+                            {...otherProps}
+                        />
+                        {label}
+                    </>
+                )}
+        </FormGroup>
     </div>
 );
 

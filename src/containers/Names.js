@@ -1,6 +1,6 @@
 import React from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import ItemForm from "./ItemForm";
+import LoaderButton from "../components/LoaderButton";
 import "./Names.css";
 
 const Names = ({ setForm, formData, navigation }) => {
@@ -10,15 +10,6 @@ const Names = ({ setForm, formData, navigation }) => {
 
     return (
         <div className="form">
-            <FormGroup controlId="email" bsSize="large">
-                <ControlLabel>First Name</ControlLabel>
-                <FormControl
-                    autoFocus
-                    type="email"
-                    value={firstName}
-                    onChange={setForm}
-                />
-            </FormGroup>
             <ItemForm
                 label="First Name"
                 name="firstName"
@@ -37,9 +28,14 @@ const Names = ({ setForm, formData, navigation }) => {
                 value={nickName}
                 onChange={setForm}
             />
-            <div>
-                <button onClick={next}>Next</button>
-            </div>
+            <LoaderButton
+                block
+                type="submit"
+                bsSize="large"
+                onClick={next}
+            >
+                Next
+        </LoaderButton>
         </div>
     );
 };
