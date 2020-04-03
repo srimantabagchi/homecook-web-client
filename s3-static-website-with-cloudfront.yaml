@@ -6,7 +6,7 @@ Parameters:
   FullDomainName:
     Type: String
     Description: The full domain name e.g. www.jevsejev.io
-    Default: notes-object-pool
+    Default: homecook-object-pool
 Resources:
   WebsiteBucket:
     Type: AWS::S3::Bucket

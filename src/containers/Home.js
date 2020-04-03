@@ -3,6 +3,7 @@ import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Home.css";
 import { API } from "aws-amplify";
+import MultiStepForm from "./MultiStepForm";
 
 export default function Home(props) {
   const [notes, setNotes] = useState([]);
@@ -63,8 +64,7 @@ export default function Home(props) {
   function renderNotes() {
     return (
       <div className="notes">
-        <PageHeader>Your Notes</PageHeader>
-        <ListGroup>{!isLoading && renderNotesList(notes)}</ListGroup>
+       <MultiStepForm />
       </div>
     );
   }
