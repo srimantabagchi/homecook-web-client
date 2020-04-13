@@ -41,7 +41,7 @@ function App(props) {
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Scratch</Link>
+              <Link to="/">Cookriz</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -50,15 +50,15 @@ function App(props) {
               {isAuthenticated ? (
                 <NavItem onClick={handleLogout}>Logout</NavItem>
               ) : (
-                <>
-                  <LinkContainer to="/signup">
-                    <NavItem>Signup</NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/login">
-                    <NavItem>Login</NavItem>
-                  </LinkContainer>
-                </>
-              )}
+                  <>
+                    <LinkContainer to="/signup">
+                      <NavItem>Signup</NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/login">
+                      <NavItem>Login</NavItem>
+                    </LinkContainer>
+                  </>
+                )}
             </Nav>
           </Navbar.Collapse>
         </Navbar>

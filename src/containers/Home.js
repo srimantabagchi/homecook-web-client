@@ -3,7 +3,7 @@ import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Home.css";
 import { API } from "aws-amplify";
-import MultiStepForm from "./MultiStepForm";
+import PartnerOnboardingForm from "./PartnerOnboardingForm";
 
 export default function Home(props) {
   const [notes, setNotes] = useState([]);
@@ -41,21 +41,21 @@ export default function Home(props) {
           </ListGroupItem>
         </LinkContainer>
       ) : (
-        <LinkContainer key="new" to="/notes/new">
-          <ListGroupItem>
-            <h4>
-              <b>{"\uFF0B"}</b> Create a new note
+          <LinkContainer key="new" to="/notes/new">
+            <ListGroupItem>
+              <h4>
+                <b>{"\uFF0B"}</b> Create a new note
             </h4>
-          </ListGroupItem>
-        </LinkContainer>
-      )
+            </ListGroupItem>
+          </LinkContainer>
+        )
     );
   }
 
   function renderLander() {
     return (
       <div className="lander">
-        <h1>Scratch</h1>
+        <h1>Cookriz</h1>
         <p>A simple note taking app</p>
       </div>
     );
@@ -64,7 +64,7 @@ export default function Home(props) {
   function renderNotes() {
     return (
       <div className="notes">
-       <MultiStepForm />
+        <PartnerOnboardingForm />
       </div>
     );
   }
