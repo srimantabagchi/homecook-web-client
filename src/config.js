@@ -1,5 +1,5 @@
 export default {
-  MAX_ATTACHMENT_SIZE: 5000000,
+  MAX_ATTACHMENT_SIZE: 1000000,
   s3: {
     REGION: "us-east-1",
     BUCKET: "homecook-api-dev-attachmentsbucket-illo723e2gd8"

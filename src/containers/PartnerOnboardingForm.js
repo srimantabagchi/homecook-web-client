@@ -1,6 +1,6 @@
-import React from 'react'
-import { Breadcrumb, Button } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+import React from 'react';
+import { Breadcrumb, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default function PartnerOnboardingForm(props) {
     return (
@@ -14,7 +14,7 @@ export default function PartnerOnboardingForm(props) {
                 </LinkContainer>
             </Breadcrumb>
             <Breadcrumb>
-                <Breadcrumb.Item active>Photos and About Me</Breadcrumb.Item>&nbsp;&nbsp;
+                <Breadcrumb.Item active>Upload Photo</Breadcrumb.Item>&nbsp;&nbsp;
                 <LinkContainer to="/partner/about">
                     <Button variant="dark">Start</Button>
                 </LinkContainer>
@@ -22,12 +22,6 @@ export default function PartnerOnboardingForm(props) {
             <Breadcrumb>
                 <Breadcrumb.Item active>Location</Breadcrumb.Item>&nbsp;&nbsp;
                 <LinkContainer to="/partner/location">
-                    <Button variant="dark">Start</Button>
-                </LinkContainer>
-            </Breadcrumb>
-            <Breadcrumb>
-                <Breadcrumb.Item active>Payment Details</Breadcrumb.Item>&nbsp;&nbsp;
-                <LinkContainer to="/partner/payment">
                     <Button variant="dark">Start</Button>
                 </LinkContainer>
             </Breadcrumb>
@@ -43,6 +37,12 @@ export default function PartnerOnboardingForm(props) {
                     <Button variant="dark">Start</Button>
                 </LinkContainer>
             </Breadcrumb>
+            <Breadcrumb>
+                <Breadcrumb.Item active>Payment Details</Breadcrumb.Item>&nbsp;&nbsp;
+                <LinkContainer to="/partner/payment">
+                    <Button variant="dark">Start</Button>
+                </LinkContainer>
+            </Breadcrumb>
         </div>
-    )
+    );
 }
